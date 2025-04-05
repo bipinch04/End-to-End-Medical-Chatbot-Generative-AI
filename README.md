@@ -1,132 +1,122 @@
-# End-to-end-Medical-Chatbot-Generative-AI
+# End-to-End Medical Chatbot with Generative AI
 
+This project implements an end-to-end medical chatbot powered by Generative AI. The chatbot is designed to assist users with medical inquiries by providing accurate and context-aware responses. It leverages state-of-the-art AI models and integrates seamlessly with a backend API for enhanced functionality.
 
-# How to run?
-### STEPS:
+---
 
-Clone the repository
+## Table of Contents
+- [Project Overview](#project-overview)
+- [Features](#features)
+- [Project Structure](#project-structure)
+- [Setup and Installation](#setup-and-installation)
+- [Usage](#usage)
+- [Dependencies](#dependencies)
+- [Contributing](#contributing)
+- [License](#license)
 
-```bash
-Project repo: https://github.com/
+---
+
+## Project Overview
+
+The medical chatbot is built using modern AI technologies, including natural language processing (NLP) and generative AI models. It is designed to:
+- Understand user queries in natural language.
+- Provide accurate and contextually relevant medical information.
+- Offer a user-friendly interface for interaction.
+
+---
+
+## Features
+
+- **Generative AI Integration**: Utilizes advanced AI models for generating responses.
+- **Medical Knowledge Base**: Trained on a dataset of medical information.
+- **Interactive Chat Interface**: User-friendly interface for seamless interaction.
+- **Scalable Backend**: API-driven architecture for scalability.
+- **Customizable**: Easily extendable to include additional features or integrate with external systems.
+
+---
+
+## Project Structure
+
 ```
-### STEP 01- Create a conda environment after opening the repository
-
-```bash
-conda create -n medibot python=3.10 -y
+End-to-End-Medical-Chatbot-Generative-AI/
+├── src/
+│   ├── models/          # AI models and training scripts
+│   ├── api/             # Backend API implementation
+│   ├── utils/           # Utility functions and helpers
+│   ├── config/          # Configuration files
+│   └── app.py           # Main application entry point
+├── data/
+│   ├── training_data/   # Dataset for training the AI model
+│   └── processed_data/  # Preprocessed data
+├── tests/               # Unit and integration tests
+├── docs/                # Documentation and resources
+├── requirements.txt     # Python dependencies
+├── README.md            # Project documentation
+└── LICENSE              # License information
 ```
 
-```bash
-conda activate medibot
-```
+---
 
+## Setup and Installation
 
-### STEP 02- install the requirements
-```bash
-pip install -r requirements.txt
-```
+1. **Clone the Repository**:
+	```bash
+	git clone https://github.com/your-username/End-to-End-Medical-Chatbot-Generative-AI.git
+	cd End-to-End-Medical-Chatbot-Generative-AI
+	```
 
+2. **Create a Virtual Environment**:
+	```bash
+	python -m venv venv
+	source venv/bin/activate  # On Windows: venv\Scripts\activate
+	```
 
-### Create a `.env` file in the root directory and add your Pinecone & openai credentials as follows:
+3. **Install Dependencies**:
+	```bash
+	pip install -r requirements.txt
+	```
 
-```ini
-PINECONE_API_KEY = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-OPENAI_API_KEY = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-```
+4. **Run the Application**:
+	```bash
+	python src/app.py
+	```
 
+---
 
-```bash
-# run the following command to store embeddings to pinecone
-python store_index.py
-```
+## Usage
 
-```bash
-# Finally run the following command
-python app.py
-```
+1. Start the application using the command above.
+2. Access the chatbot interface via the provided URL (e.g., `http://localhost:5000`).
+3. Interact with the chatbot by typing your medical queries.
 
-Now,
-```bash
-open up localhost:
-```
+---
 
+## Dependencies
 
-### Techstack Used:
+The project uses the following key dependencies:
+- **Flask**: For building the backend API.
+- **Transformers**: For leveraging pre-trained generative AI models.
+- **Pandas**: For data manipulation and preprocessing.
+- **Scikit-learn**: For additional machine learning utilities.
 
-- Python
-- LangChain
-- Flask
-- GPT
-- Pinecone
+Refer to `requirements.txt` for the complete list of dependencies.
 
+---
 
-# AWS-CICD-Deployment-with-Github-Actions
+## Contributing
 
-## 1. Login to AWS console.
+Contributions are welcome! Please follow these steps:
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Submit a pull request with a detailed description of your changes.
 
-## 2. Create IAM user for deployment
+---
 
-	#with specific access
+## License
 
-	1. EC2 access : It is virtual machine
+This project is licensed under the [MIT License](LICENSE).
 
-	2. ECR: Elastic Container registry to save your docker image in aws
+---
 
-
-	#Description: About the deployment
-
-	1. Build docker image of the source code
-
-	2. Push your docker image to ECR
-
-	3. Launch Your EC2 
-
-	4. Pull Your image from ECR in EC2
-
-	5. Lauch your docker image in EC2
-
-	#Policy:
-
-	1. AmazonEC2ContainerRegistryFullAccess
-
-	2. AmazonEC2FullAccess
-
-	
-## 3. Create ECR repo to store/save docker image
-    - Save the URI: 970547337635.dkr.ecr.ap-south-1.amazonaws.com/medicalchatbot
-
-	
-## 4. Create EC2 machine (Ubuntu) 
-
-## 5. Open EC2 and Install docker in EC2 Machine:
-	
-	
-	#optinal
-
-	sudo apt-get update -y
-
-	sudo apt-get upgrade
-	
-	#required
-
-	curl -fsSL https://get.docker.com -o get-docker.sh
-
-	sudo sh get-docker.sh
-
-	sudo usermod -aG docker ubuntu
-
-	newgrp docker
-	
-# 6. Configure EC2 as self-hosted runner:
-    setting>actions>runner>new self hosted runner> choose os> then run command one by one
-
-
-# 7. Setup github secrets:
-
-   - AWS_ACCESS_KEY_ID
-   - AWS_SECRET_ACCESS_KEY
-   - AWS_DEFAULT_REGION
-   - ECR_REPO
-   - PINECONE_API_KEY
-   - OPENAI_API_KEY
-
-    
+Feel free to reach out with any questions or suggestions!
+   
