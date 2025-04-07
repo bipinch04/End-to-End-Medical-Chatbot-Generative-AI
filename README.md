@@ -67,8 +67,8 @@ End-to-End-Medical-Chatbot-Generative-AI/
 	cd End-to-End-Medical-Chatbot-Generative-AI
 	```
 
-2. **Download the dataset**  
-	Download the dataset from [Kaggle](https://www.kaggle.com/datasets/vipoooool/new-plant-diseases-dataset) and place it in the `data/training_data/` directory.
+2. **Prepare the dataset**  
+	Place your dataset in the `data/training_data/` directory.
 
 3. **Create a conda environment**  
 	```bash
