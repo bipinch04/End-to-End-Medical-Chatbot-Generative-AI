@@ -1,6 +1,6 @@
 # End-to-End Medical Chatbot with Generative AI
 
-This project implements an end-to-end medical chatbot powered by Generative AI. The chatbot is designed to assist users with medical inquiries by providing accurate and context-aware responses. It leverages state-of-the-art AI models and integrates seamlessly with a backend API for enhanced functionality.
+This project implements an end-to-end medical chatbot powered by Generative AI. The chatbot assists users with medical inquiries by providing accurate and context-aware responses. It leverages state-of-the-art AI models and integrates seamlessly with a backend API for enhanced functionality.
 
 ---
 
@@ -62,48 +62,44 @@ End-to-End-Medical-Chatbot-Generative-AI/
 ### Steps:
 
 1. **Clone the repository**  
-	Repository URL: [https://github.com/](https://github.com/)
-
-2. **Create a conda environment**  
 	```bash
-	conda create -n medibot python=3.10 -y
-	conda activate medibot
+	git clone https://github.com/your-repo-url.git
+	cd End-to-End-Medical-Chatbot-Generative-AI
 	```
 
-3. **Install the requirements**  
+2. **Download the dataset**  
+	Download the dataset from [Kaggle](https://www.kaggle.com/datasets/vipoooool/new-plant-diseases-dataset) and place it in the `data/training_data/` directory.
+
+3. **Create a conda environment**  
+	```bash
+	conda create -n myenv python=3.10 -y
+	conda activate myenv
+	```
+
+4. **Install the requirements**  
 	```bash
 	pip install -r requirements.txt
 	```
 
-4. **Set up environment variables**  
+5. **Set up environment variables**  
 	Create a `.env` file in the root directory and add your Pinecone & OpenAI credentials:
 	```env
 	PINECONE_API_KEY = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 	OPENAI_API_KEY = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 	```
 
-5. **Store embeddings to Pinecone**  
+6. **Store embeddings to Pinecone**  
 	```bash
 	python store_index.py
 	```
 
-6. **Run the application**  
+7. **Run the application**  
 	```bash
 	python app.py
 	```
 
-7. **Access the application**  
+8. **Access the application**  
 	Open your browser and navigate to `http://localhost:5000`.
-
----
-
-## Tech Stack Used
-
-- **Python**
-- **LangChain**
-- **Flask**
-- **GPT**
-- **Pinecone**
 
 ---
 
