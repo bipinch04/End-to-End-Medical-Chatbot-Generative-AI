@@ -59,35 +59,53 @@ End-to-End-Medical-Chatbot-Generative-AI/
 
 ## Setup and Installation
 
-STEPS:
-Clone the repository
+### Steps:
 
-Project repo: https://github.com/
+1. **Clone the repository**  
+	Repository URL: [https://github.com/](https://github.com/)
 
-STEP 01- Create a conda environment after opening the repository
-conda create -n medibot python=3.10 -y
-conda activate medibot
+2. **Create a conda environment**  
+	```bash
+	conda create -n medibot python=3.10 -y
+	conda activate medibot
+	```
 
-STEP 02- install the requirements
-pip install -r requirements.txt
+3. **Install the requirements**  
+	```bash
+	pip install -r requirements.txt
+	```
 
-Create a .env file in the root directory and add your Pinecone & openai credentials as follows:
-PINECONE_API_KEY = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-OPENAI_API_KEY = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+4. **Set up environment variables**  
+	Create a `.env` file in the root directory and add your Pinecone & OpenAI credentials:
+	```env
+	PINECONE_API_KEY = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+	OPENAI_API_KEY = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+	```
 
-# run the following command to store embeddings to pinecone
-python store_index.py
-# Finally run the following command
-python app.py
-Now,
-open up localhost:
+5. **Store embeddings to Pinecone**  
+	```bash
+	python store_index.py
+	```
 
-Techstack Used:
-Python
-LangChain
-Flask
-GPT
-Pinecone
+6. **Run the application**  
+	```bash
+	python app.py
+	```
+
+7. **Access the application**  
+	Open your browser and navigate to `http://localhost:5000`.
+
+---
+
+## Tech Stack Used
+
+- **Python**
+- **LangChain**
+- **Flask**
+- **GPT**
+- **Pinecone**
+
+---
 
 ## Usage
 
@@ -124,5 +142,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-Feel free to reach out with any questions or suggestions!
-   
+Feel free to reach out with any questions or suggestions!  
