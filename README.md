@@ -59,29 +59,35 @@ End-to-End-Medical-Chatbot-Generative-AI/
 
 ## Setup and Installation
 
-1. **Clone the Repository**:
-	```bash
-	git clone https://github.com/your-username/End-to-End-Medical-Chatbot-Generative-AI.git
-	cd End-to-End-Medical-Chatbot-Generative-AI
-	```
+STEPS:
+Clone the repository
 
-2. **Create a Virtual Environment**:
-	```bash
-	python -m venv venv
-	source venv/bin/activate  # On Windows: venv\Scripts\activate
-	```
+Project repo: https://github.com/
 
-3. **Install Dependencies**:
-	```bash
-	pip install -r requirements.txt
-	```
+STEP 01- Create a conda environment after opening the repository
+conda create -n medibot python=3.10 -y
+conda activate medibot
 
-4. **Run the Application**:
-	```bash
-	python src/app.py
-	```
+STEP 02- install the requirements
+pip install -r requirements.txt
 
----
+Create a .env file in the root directory and add your Pinecone & openai credentials as follows:
+PINECONE_API_KEY = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+OPENAI_API_KEY = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+
+# run the following command to store embeddings to pinecone
+python store_index.py
+# Finally run the following command
+python app.py
+Now,
+open up localhost:
+
+Techstack Used:
+Python
+LangChain
+Flask
+GPT
+Pinecone
 
 ## Usage
 

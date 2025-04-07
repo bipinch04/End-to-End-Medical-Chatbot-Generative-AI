@@ -1,11 +1,20 @@
 sentence-transformers==2.2.2
-langchain
-flask
+huggingface-hub==0.16.4  # compatible with sentence-transformers 2.2.2
+
+# LangChain ecosystem
+langchain==0.1.14
+langchain-community==0.0.32
+langchain-openai==0.0.8
+langchain-pinecone==0.0.3
+langchain-experimental==0.0.11
+
+# PDF, Flask, Environment
 pypdf
+flask
 python-dotenv
-pinecone[grpc]
-langchain-pinecone
-langchain_community
-langchain_openai
-langchain_experimental
+
+# Pinecone
+pinecone-client[grpc]
+
+# Local module
 -e .
