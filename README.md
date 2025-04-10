@@ -11,8 +11,7 @@ This project implements an end-to-end medical chatbot powered by Generative AI. 
 - [Setup and Installation](#setup-and-installation)
 - [Usage](#usage)
 - [Dependencies](#dependencies)
-- [Contributing](#contributing)
-- [License](#license)
+- [Team Members](#team-members)
 
 ---
 
@@ -123,19 +122,9 @@ Refer to `requirements.txt` for the complete list of dependencies.
 
 ---
 
-## Contributing
+## Team Members
 
-Contributions are welcome! Please follow these steps:
-1. Fork the repository.
-2. Create a new branch for your feature or bug fix.
-3. Submit a pull request with a detailed description of your changes.
-
----
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
----
-
-Feel free to reach out with any questions or suggestions!  
+- **Bipin Kumar Chaudhary** (21053451)  
+- **Jay Prakash Giri** (21053460)  
+- **Mahi Kumari** (21053345)  
+- **Sudhir Jaiswal** (21053381) 
